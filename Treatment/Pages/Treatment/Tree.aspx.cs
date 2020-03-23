@@ -14,11 +14,11 @@ namespace Treatment.Pages.Treatment
         ECMSEntities db = new ECMSEntities();
         protected void Page_Load(object sender, EventArgs e)
         {
-            /*
+            
             List<Structure> structList = db.Structures.ToList();
             ddlFiller.dropDDL(ddlParent, "Structure_Id", "Structure_Name", structList, "Select Parent");
             if (structList.Count > 0)
-                ddlParent.SelectedIndex = 1;*/
+                ddlParent.SelectedIndex = 1;
         }
 
         protected void Save_Click(object sender, EventArgs e)

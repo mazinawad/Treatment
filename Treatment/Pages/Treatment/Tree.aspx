@@ -37,7 +37,7 @@
                 </div>
                 <div class="form-group row">
                     <div class="col-sm-4">
-                        <asp:Button ID="Save" runat="server" Text="Add Treatment"  class="btn btn-primary btn-round" OnClick="Save_Click" />
+                        <asp:Button ID="Save" runat="server" Text="Add Treatment" class="btn btn-primary btn-round" OnClick="Save_Click" />
                     </div>
 
                 </div>
@@ -50,37 +50,52 @@
                             <Columns>
                                 <dx:TreeListTextColumn Caption="Name" FieldName="Structure_Name" VisibleIndex="0">
                                 </dx:TreeListTextColumn>
-                                <dx:TreeListCommandColumn VisibleIndex="2" ButtonType="Button">
-                                    <EditButton Visible="True">
+                                <dx:TreeListCommandColumn VisibleIndex="2">
+                                    <EditButton Visible="True" Text=" ">
+                                        <Styles>
+                                            <Style CssClass=" icofont icofont-ui-edit text-primary h6" VerticalAlign="Middle" Font-Underline="false">
+                                </Style>
+                                        </Styles>
                                     </EditButton>
-                                    <DeleteButton Visible="True">
+                                    <NewButton Visible="True">
+                                    </NewButton>
+                                    <DeleteButton Visible="True" Text=" ">
+                                        <Styles>
+
+                                            <Style CssClass="icofont icofont-ui-delete text-danger h6" VerticalAlign="Middle">
+                                    
+                                </Style>
+                                        </Styles>
                                     </DeleteButton>
+                                    <UpdateButton Text=" ">
+                                        <Styles>
+                                            <Style CssClass="icofont icofont-refresh text-primary h6" VerticalAlign="Middle">
+                                            </Style>
+                                        </Styles>
+                                    </UpdateButton>
+                                    <CancelButton Text=" ">
+                                        <Styles>
+                                            <Style CssClass="icofont icofont-ui-close text-warning h6">
+                                            </Style>
+                                        </Styles>
+                                    </CancelButton>
                                 </dx:TreeListCommandColumn>
                             </Columns>
-                            <Settings ShowTreeLines="False" />
                             <SettingsBehavior AutoExpandAllNodes="True" />
                             <SettingsPager Mode="ShowPager">
                             </SettingsPager>
+
+                            <SettingsCustomizationWindow PopupHorizontalAlign="RightSides" PopupVerticalAlign="BottomSides"></SettingsCustomizationWindow>
+
                             <SettingsEditing AllowNodeDragDrop="True" />
+
+                            <SettingsPopupEditForm VerticalOffset="-1"></SettingsPopupEditForm>
+
+                            <SettingsPopup>
+                                <EditForm VerticalOffset="-1"></EditForm>
+                            </SettingsPopup>
                         </dx:ASPxTreeList>
                         <asp:EntityDataSource ID="TreeDataSourceView" runat="server" ConnectionString="name=ECMSEntities" DefaultContainerName="ECMSEntities" EnableDelete="True" EnableFlattening="False" EnableInsert="True" EnableUpdate="True" EntitySetName="Structures" EntityTypeFilter="Structure">
-                        </asp:EntityDataSource>
-                    </div>
-                    <div class="col-sm-4">
-                        <dx:ASPxGridView ID="TreeGridView" runat="server" AutoGenerateColumns="False" DataSourceID="TreeDataSource" EnableTheming="True" KeyFieldName="Structure_Id" Theme="Mulberry">
-                            <Columns>
-                                <dx:GridViewCommandColumn ShowDeleteButton="True" ShowEditButton="True" ShowNewButtonInHeader="True" VisibleIndex="3" ButtonType="Button">
-                                </dx:GridViewCommandColumn>
-                                <dx:GridViewDataTextColumn Caption="ID" FieldName="Structure_Id" ReadOnly="True" VisibleIndex="0">
-                                </dx:GridViewDataTextColumn>
-                                <dx:GridViewDataTextColumn Caption="Name" FieldName="Structure_Name" VisibleIndex="1">
-                                </dx:GridViewDataTextColumn>
-                                <dx:GridViewDataTextColumn Caption="Parent ID" FieldName="Structure_Parent" VisibleIndex="2">
-                                </dx:GridViewDataTextColumn>
-                            </Columns>
-                            <Styles AdaptiveDetailButtonWidth="22"></Styles>
-                        </dx:ASPxGridView>
-                        <asp:EntityDataSource ID="TreeDataSource" runat="server" ConnectionString="name=ECMSEntities" DefaultContainerName="ECMSEntities" EnableDelete="True" EnableFlattening="False" EnableInsert="True" EnableUpdate="True" EntitySetName="Structures">
                         </asp:EntityDataSource>
                     </div>
                 </div>
