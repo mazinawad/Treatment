@@ -24,7 +24,6 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -140,15 +139,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Email\SendingEmail.aspx" />
-    <Content Include="Entity\ECMSEntities.Context.tt">
+    <Content Include="Entity\EMCS.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ECMSEntities.edmx</DependentUpon>
-      <LastGenOutput>ECMSEntities.Context.cs</LastGenOutput>
+      <DependentUpon>EMCS.edmx</DependentUpon>
+      <LastGenOutput>EMCS.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Entity\ECMSEntities.tt">
+    <Content Include="Entity\EMCS.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ECMSEntities.edmx</DependentUpon>
-      <LastGenOutput>ECMSEntities.cs</LastGenOutput>
+      <DependentUpon>EMCS.edmx</DependentUpon>
+      <LastGenOutput>EMCS.cs</LastGenOutput>
     </Content>
     <Content Include="Global.asax" />
     <Content Include="Pages\Setting\TreatmentPriority.aspx" />
@@ -2069,9 +2068,7 @@
     <Content Include="Theme\files\extra-pages\landingpage\assets\logos\logo7.png" />
     <Content Include="Theme\files\extra-pages\landingpage\index.htm" />
     <Content Include="TreatmentCreate.aspx" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Web.config" />
     <Content Include="Default.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -2089,79 +2086,85 @@
       <DependentUpon>SendingEmail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Entity\Assignment_Status.cs">
-      <DependentUpon>ECMSEntities.tt</DependentUpon>
+      <DependentUpon>EMCS.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\Attachment.cs">
-      <DependentUpon>ECMSEntities.tt</DependentUpon>
+      <DependentUpon>EMCS.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entity\ECMSEntities.Context.cs">
+    <Compile Include="Entity\EMCS.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ECMSEntities.Context.tt</DependentUpon>
+      <DependentUpon>EMCS.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entity\ECMSEntities.cs">
+    <Compile Include="Entity\EMCS.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ECMSEntities.tt</DependentUpon>
+      <DependentUpon>EMCS.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entity\ECMSEntities.Designer.cs">
+    <Compile Include="Entity\EMCS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ECMSEntities.edmx</DependentUpon>
+      <DependentUpon>EMCS.edmx</DependentUpon>
     </Compile>
     <Compile Include="Entity\Employee.cs">
-      <DependentUpon>ECMSEntities.tt</DependentUpon>
+      <DependentUpon>EMCS.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\Employee_Structure.cs">
-      <DependentUpon>ECMSEntities.tt</DependentUpon>
+      <DependentUpon>EMCS.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\Group.cs">
-      <DependentUpon>ECMSEntities.tt</DependentUpon>
+      <DependentUpon>EMCS.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\Log_File.cs">
-      <DependentUpon>ECMSEntities.tt</DependentUpon>
+      <DependentUpon>EMCS.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\Owner_Relationship.cs">
-      <DependentUpon>ECMSEntities.tt</DependentUpon>
+      <DependentUpon>EMCS.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\Permission.cs">
-      <DependentUpon>ECMSEntities.tt</DependentUpon>
+      <DependentUpon>EMCS.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\Permission_Group.cs">
-      <DependentUpon>ECMSEntities.tt</DependentUpon>
+      <DependentUpon>EMCS.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\Prepared_Administration.cs">
-      <DependentUpon>ECMSEntities.tt</DependentUpon>
+      <DependentUpon>EMCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>EMCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\sp_helpdiagrams_Result.cs">
+      <DependentUpon>EMCS.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\Structure.cs">
-      <DependentUpon>ECMSEntities.tt</DependentUpon>
+      <DependentUpon>EMCS.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\Treatment.cs">
-      <DependentUpon>ECMSEntities.tt</DependentUpon>
+      <DependentUpon>EMCS.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\Treatment_Class.cs">
-      <DependentUpon>ECMSEntities.tt</DependentUpon>
+      <DependentUpon>EMCS.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\Treatment_Confidentiality.cs">
-      <DependentUpon>ECMSEntities.tt</DependentUpon>
+      <DependentUpon>EMCS.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\Treatment_Delivery.cs">
-      <DependentUpon>ECMSEntities.tt</DependentUpon>
+      <DependentUpon>EMCS.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\Treatment_Detial.cs">
-      <DependentUpon>ECMSEntities.tt</DependentUpon>
+      <DependentUpon>EMCS.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\Treatment_Priority.cs">
-      <DependentUpon>ECMSEntities.tt</DependentUpon>
+      <DependentUpon>EMCS.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\Treatment_Procedure.cs">
-      <DependentUpon>ECMSEntities.tt</DependentUpon>
+      <DependentUpon>EMCS.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\Treatment_Status.cs">
-      <DependentUpon>ECMSEntities.tt</DependentUpon>
+      <DependentUpon>EMCS.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\Treatment_Type.cs">
-      <DependentUpon>ECMSEntities.tt</DependentUpon>
+      <DependentUpon>EMCS.tt</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -2368,12 +2371,12 @@
     <Content Include="Theme\files\extra-pages\landingpage\assets\fonts\ionicons.woff" />
     <Content Include="Theme\files\readme.md" />
     <Content Include="MasterEn.Master" />
-    <EntityDeploy Include="Entity\ECMSEntities.edmx">
+    <EntityDeploy Include="Entity\EMCS.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ECMSEntities.Designer.cs</LastGenOutput>
+      <LastGenOutput>EMCS.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Entity\ECMSEntities.edmx.diagram">
-      <DependentUpon>ECMSEntities.edmx</DependentUpon>
+    <Content Include="Entity\EMCS.edmx.diagram">
+      <DependentUpon>EMCS.edmx</DependentUpon>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
